@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cloud Eagle | Home</title>
+		<meta name="author" content="nihal" />
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/revealer.css" />
+		<link rel="stylesheet" type="text/css" href="css/pater.css" />
+		<script>document.documentElement.className = 'js';</script>
+	</head>
+	<body class="demo-overview loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+		</svg>
+		<main>
+			<section class="content content--full flexy intro">
+				
+				<header class="codrops-header">
+					
+					<h1 class="codrops-header__title">Cloud IDo Initiative</h1>
+					
+				</header>
+						
+					
+				
+				<h2 class="content__title content__title--center">
+					<div id="rev-1" class="content__title__inner">The Cloud</div><br/>
+					<div id="rev-2" class="content__title__inner content__title__inner--offset-1">Eagle</div>
+				</h2>
+			</section>
+			<p class="content__heading">our Motto</p>
+			
+			<section class="content content--full flexy flexy--row">
+				<div id="rev-6" class="content__image-wrap content__image-wrap--half">
+					<img class="content__image" src="img/2.jpg" alt="Some image"/>
+				</div>
+				<h2 class="content__title content__title--medium content__title--half content__title--left">
+					<div id="rev-7" class="content__title__inner content__title__inner--offset-3">The eagle likes to fly high</div><br/>
+					<div id="rev-8" class="content__title__inner ">Not to look down on people</div><br/>
+					<div id="rev-9" class="content__title__inner content__title__inner--offset-3">but, to make them look high</div>
+				</h2>
+			</section>
+			
+
+		</main>
+		<script src="js/anime.min.js"></script>
+		<script src="js/scrollMonitor.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			// Fake loading.
+			setTimeout(init, 1000);
+
+			function init() {
+				document.body.classList.remove('loading');
+
+				//************************ Example 1 - reveal on load ********************************
+				
+				var rev1 = new RevealFx(document.querySelector('#rev-1'), {
+					revealSettings : {
+						bgcolor: '#7f40f1',
+						onCover: function(contentEl, revealerEl) {
+							contentEl.style.opacity = 1;
+						}
+					}
+				});
+				rev1.reveal();
+
+				var rev2 = new RevealFx(document.querySelector('#rev-2'), {
+					revealSettings : {
+						bgcolor: '#fcf652',
+						delay: 250,
+						onCover: function(contentEl, revealerEl) {
+							contentEl.style.opacity = 1;
+						}
+					}
+				});
+				rev2.reveal();
+
+				//************************ Example 2 - reveal on scroll ********************************
+
+					scrollElemToWatch_2 = document.getElementById('rev-6'),
+					watcher_2 = scrollMonitor.create(scrollElemToWatch_2, -300),
+					rev6 = new RevealFx(scrollElemToWatch_2, {
+						revealSettings : {
+							bgcolor: '#fcf652',
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+							}
+						}
+					}),
+					rev7 = new RevealFx(document.querySelector('#rev-7'), {
+						revealSettings : {
+							bgcolor: '#7f40f1',
+							direction: 'rl',
+							delay: 250,
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+							}
+						}
+					}),
+					rev8 = new RevealFx(document.querySelector('#rev-8'), {
+						revealSettings : {
+							bgcolor: '#7f40f1',
+							direction: 'rl',
+							delay: 500,
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+							}
+						}
+					}),
+					rev9 = new RevealFx(document.querySelector('#rev-9'), {
+						revealSettings : {
+							bgcolor: '#7f40f1',
+							direction: 'rl',
+							delay: 250,
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+							}
+						}
+					}),
+
+				watcher_2.enterViewport(function() {
+					rev6.reveal();
+					rev7.reveal();
+					rev8.reveal();
+					rev9.reveal();
+					watcher_2.destroy();
+				});
+				
+				
+			}
+		})();
+		</script>
+	</body>
+</html>
